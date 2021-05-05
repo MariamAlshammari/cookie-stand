@@ -1,4 +1,6 @@
-* {
+* {box-sizing: border-box;
+    margin: auto;
+}
     font-family: Arial, sans-serif;
 }
 
@@ -13,20 +15,21 @@ th {
 td {
     border: solid black 1px;
 }
+
+
 * {
     box-sizing: border-box;
-    align-content: center; 
     margin: auto;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    padding: 10px;
-    background-color: #e8e8ff;
+    
+    background-color: #f792c9;
     width: 90%;
     margin: auto;
 
-   /*margin: 0 auto;*/
+   /*margin: 0 auto;padding: 10px;*/
 }
 
 header {
@@ -34,15 +37,29 @@ header {
     text-align: center;
     background-color: white;
 }
-.card{padding: 30px;}
+/*.card{padding: 30px;}*/
 
 header h1 {
     font-size: 50px;
     font-weight: bolder;
 }
 
+.img1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 300px;
+  }
+  
+
 nav {
-    background-color: #848491;
+    background-color: #e4751a;
 }
 
 
@@ -64,60 +81,33 @@ nav ul li a {
     font-weight: bold;
 }
 
+#oll{background-color: aquamarine;
+    width: 20%;
+float: left;}
 
-
-
-
-
-h2,
-h3 {
-    font-weight: bold;
-    padding: 10px 0;
+.hour{font-weight: bold;
+font-style: italic;
 }
+section{padding: 30px;}
+
+
+
+
 
 p {
     font-weight: 500;
-    text-align: justify;
 }
-/*
-main article div  {position:relative;
-    float: right;
-
-}
-main article div img{
-    position:absolute;
-    top:0;
-    left: 0;
-    float: left;
-
+footer {
+    clear: both;
+    padding: 30px;
+    background-color: #f18723ee;
     
-    
-}*/
-
-.right  h2, p{float: right;
-width: 50%;
- }
- .right  p{overflow: scroll;
- }
-
-.left{float: left;}
-
-.hover1 p a{border:solid 3px black;
-    border-radius: 25%;
-    background-color: rgba(211, 211, 211, 0.801);
-    text-decoration: none;
-    display: inline-block;
-   }
-   .hover1 p :hover{background-color: brown;
 }
 
 
 
 
 
-    footer {
-        clear: both;
-        padding: 30px;
-        background-color: #c3c1c7ee;
-        
-    }
+
+
+   
