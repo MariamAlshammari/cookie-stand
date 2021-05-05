@@ -239,6 +239,82 @@ footerRender();
 
 
 
+/////////////////////////////
+
+
+
+
+let salesForm = document.getElementById('salesForm');
+salesForm.addEventListener('submit', submitter);
+
+
+function submitter(event) {
+    event.preventDefault();
+     console.log('hello event is working', event);
+
+    let locationName = event.target.locName.value;
+    console.log(locationName
+      );
+    let minimumCustomer = event.target.minCust.value;
+    console.log(minimumCustomer);
+
+    // the input in the constructor should be an array
+    //let likesArray = likes.split(',');
+
+    let maximumCustomer = event.target.maxCust.value;
+    console.log(maximumCustomer);
+
+
+    let avgCoockie = event.target.avgCoockie.value;
+    console.log(avgCoockie);
+
+   
+
+    let addedLocation = new Location(locationName, minCustomer, maxCustomer, avgCoockieSale);
+
+    addedLocation.rowRender();
+    addedLocation.tableRender();
+
+    let container1 = document.getElementById('slalmonCoockieLocation');
+    container1.textContent = '';
+    for (let i = 0; i < locations.length; i++) {
+
+        locations[i].tableRender();
+        locations[i].rowRender();
+
+    }
+}
+
+for (let i = 0; i < locations.length; i++) {
+
+    locations[i].tableRender();
+    locations[i].rowRender();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
