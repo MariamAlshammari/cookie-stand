@@ -44,60 +44,6 @@ Location.prototype.calCoockiesPurchaisedNum = function() {
 let container = document.getElementById('SalmonCookiesContent');
 console.log(container);
 
-// Location.prototype.render = function() {
-
-
-//    let article = document.createElement('article');
-//   container.appendChild(article);
-
-//   // h2
-//   let h2 = document.createElement('h2');
-//   article.appendChild(h2);
-//   h2.textContent = this.locationName;
-
-//   // p
-//   let p = document.createElement('p');
-//   article.appendChild(p);
-//   p.textContent = `${this.locationName} is one of location and is ${this.minCustomer} minimum number of customer in it and its is ${this.maxCustomer} maximum number of customer.`
-
-// /*
-//   let ul = document.createElement('ul');
-//   // append
-//   article.appendChild(ul);
-//   for (let i = 0; i < this.numOfCust.length; i++) {
-//     // console.log(this.likes[i]);
-//     // create li
-//     let li = document.createElement('li');
-//     // append
-//     ul.appendChild(li);
-//     li.textContent = `Number of customer: ${this.numOfCust[i]}`;
-// }
-// for (let i = 0; i < this.coockiesPurchaisedNum.length; i++) {
-//    console.log(this.coockiesPurchaisedNum[i]);
-//   // create li
-//   let li = document.createElement('li');
-//   // append
-//  // ul.appendChild(li);
-//   //li.textContent = this.coockiesPurchaisedNum[i];
-  
-
-
-// }
-// for (let i = 0; i < hours.length; i++) {
-// let li = document.createElement('li');
-// ul.appendChild(li);
-// li.textContent = `${hours[i]}:${this.coockiesPurchaisedNum[i]} cookies`
-// }
-// let totalLi = document.createElement('li');
-// ul.appendChild(totalLi);
-// totalLi.textContent = `Total: ${this.totalPerHour} cookies` */
-
-
-// let img = document.createElement('img');
-// article.appendChild(img);
-
-// img.setAttribute('src', `img/salmon.png`);}
-
 
 
 
@@ -194,6 +140,8 @@ td3.textContent =this.totalPerHour;
 function footerRender(){
   let table=document.getElementById('table');
   let footer=document.createElement('tr');
+  footer.setAttribute('id','footerr');
+
   table.appendChild(footer);
   let tdFooter=document.createElement('td')
   footer.appendChild(tdFooter);
@@ -244,7 +192,14 @@ salesForm.addEventListener('submit', submitter);
 
 function submitter(event) {
     event.preventDefault();
-     console.log('hello event is working', event);
+
+    
+//delete footerRender;
+ let myfooter = document.getElementById("footerr");
+   myfooter.remove();
+
+
+
 
     let locationName = event.target.locName.value;
     console.log(locationName
@@ -252,8 +207,6 @@ function submitter(event) {
     let minimumCustomer = event.target.minCust.value;
     console.log(minimumCustomer);
 
-    // the input in the constructor should be an array
-    //let likesArray = likes.split(',');
 
     let maximumCustomer = event.target.maxCust.value;
     console.log(maximumCustomer);
@@ -264,26 +217,25 @@ function submitter(event) {
 
    
 
-    let addedLocation = new Location(locationName, minCustomer, maxCustomer, avgCoockieSale);
-
+    let addedLocation = new Location(locationName, minimumCustomer, maximumCustomer, avgCoockie);
+addedLocation.calNumOfCust();
+    addedLocation.calCoockiesPurchaisedNum();
     addedLocation.rowRender();
-    addedLocation.tableRender();
 
+    
     let container1 = document.getElementById('slalmonCoockieLocation');
     container1.textContent = '';
-    for (let i = 0; i < locations.length; i++) {
+    footerRender();
 
-        locations[i].tableRender();
-        locations[i].rowRender();
 
-    }
+    
 }
 
-for (let i = 0; i < locations.length; i++) {
+// for (let i = 0; i < locations.length; i++) {
 
-    locations[i].tableRender();
-    locations[i].rowRender();
-}
+//     locations[i].tableRender();
+//     locations[i].rowRender();
+// }
 
 
 
