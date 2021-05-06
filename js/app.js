@@ -44,95 +44,89 @@ Location.prototype.calCoockiesPurchaisedNum = function() {
 let container = document.getElementById('SalmonCookiesContent');
 console.log(container);
 
-Location.prototype.render = function() {
-  this.calNumOfCust();
-  this.calCoockiesPurchaisedNum();
+// Location.prototype.render = function() {
 
-   let article = document.createElement('article');
-  container.appendChild(article);
 
-  // h2
-  let h2 = document.createElement('h2');
-  article.appendChild(h2);
-  h2.textContent = this.locationName;
+//    let article = document.createElement('article');
+//   container.appendChild(article);
 
-  // p
-  let p = document.createElement('p');
-  article.appendChild(p);
-  p.textContent = `${this.locationName} is one of location and is ${this.minCustomer} minimum number of customer in it and its is ${this.maxCustomer} maximum number of customer.`
+//   // h2
+//   let h2 = document.createElement('h2');
+//   article.appendChild(h2);
+//   h2.textContent = this.locationName;
 
-/*
-  let ul = document.createElement('ul');
-  // append
-  article.appendChild(ul);
-  for (let i = 0; i < this.numOfCust.length; i++) {
-    // console.log(this.likes[i]);
-    // create li
-    let li = document.createElement('li');
-    // append
-    ul.appendChild(li);
-    li.textContent = `Number of customer: ${this.numOfCust[i]}`;
-}
-for (let i = 0; i < this.coockiesPurchaisedNum.length; i++) {
-   console.log(this.coockiesPurchaisedNum[i]);
-  // create li
-  let li = document.createElement('li');
-  // append
- // ul.appendChild(li);
-  //li.textContent = this.coockiesPurchaisedNum[i];
+//   // p
+//   let p = document.createElement('p');
+//   article.appendChild(p);
+//   p.textContent = `${this.locationName} is one of location and is ${this.minCustomer} minimum number of customer in it and its is ${this.maxCustomer} maximum number of customer.`
+
+// /*
+//   let ul = document.createElement('ul');
+//   // append
+//   article.appendChild(ul);
+//   for (let i = 0; i < this.numOfCust.length; i++) {
+//     // console.log(this.likes[i]);
+//     // create li
+//     let li = document.createElement('li');
+//     // append
+//     ul.appendChild(li);
+//     li.textContent = `Number of customer: ${this.numOfCust[i]}`;
+// }
+// for (let i = 0; i < this.coockiesPurchaisedNum.length; i++) {
+//    console.log(this.coockiesPurchaisedNum[i]);
+//   // create li
+//   let li = document.createElement('li');
+//   // append
+//  // ul.appendChild(li);
+//   //li.textContent = this.coockiesPurchaisedNum[i];
   
 
 
-}
-for (let i = 0; i < hours.length; i++) {
-let li = document.createElement('li');
-ul.appendChild(li);
-li.textContent = `${hours[i]}:${this.coockiesPurchaisedNum[i]} cookies`
-}
-let totalLi = document.createElement('li');
-ul.appendChild(totalLi);
-totalLi.textContent = `Total: ${this.totalPerHour} cookies` */
+// }
+// for (let i = 0; i < hours.length; i++) {
+// let li = document.createElement('li');
+// ul.appendChild(li);
+// li.textContent = `${hours[i]}:${this.coockiesPurchaisedNum[i]} cookies`
+// }
+// let totalLi = document.createElement('li');
+// ul.appendChild(totalLi);
+// totalLi.textContent = `Total: ${this.totalPerHour} cookies` */
 
 
-let img = document.createElement('img');
-article.appendChild(img);
+// let img = document.createElement('img');
+// article.appendChild(img);
 
-img.setAttribute('src', `img/salmon.png`);}
+// img.setAttribute('src', `img/salmon.png`);}
 
 
 
 
 let seattle = new Location('seattle', 23, 65, 6.3);
 console.log(seattle);
- seattle.render();
  seattle.calNumOfCust();
  seattle.calCoockiesPurchaisedNum();
  //seattle.tableRender();
 
  let tokyo = new Location('tokyo', 3, 24, 1.2);
 console.log(tokyo);
- tokyo.render();
  tokyo.calNumOfCust();
  tokyo.calCoockiesPurchaisedNum();
  //tokyo.tableRender();
 
  let dubai = new Location('dubai', 11, 38, 3.7);
 console.log(dubai);
- dubai.render();
  dubai.calNumOfCust();
  dubai.calCoockiesPurchaisedNum();
  //dubai.tableRender();
 
  let paris = new Location('paris', 20, 38, 2.3);
 console.log(paris);
- paris.render();
  paris.calNumOfCust();
  paris.calCoockiesPurchaisedNum();
  //paris.tableRender();
 
  let lima = new Location('lima', 2, 16, 4.6);
 console.log(lima);
- lima.render();
  lima.calNumOfCust();
  lima.calCoockiesPurchaisedNum();
 // lima.tableRender();
