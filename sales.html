@@ -6,10 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">  
       <title>Salmon Cookies</title>
+      <style>
+        input[type=text], select {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+        
+        input[type=submit] {
+          width: 100%;
+          background-color: #4CAF50;
+          color: white;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+        
+        input[type=submit]:hover {
+          background-color: #45a049;
+        }
+  
+        
+      
+        </style>
 </head>
 <body>
   <main>
-    <h1>Pat's Salmon Cookies: Sales Data</h1>
+    <h1 style="text-align: center;padding: 30px;background-color: white;font-size: 50px;">Pat's Salmon Cookies: Sales Data</h1>
     <nav class="top">
         <ul>
           <li><a href="index.html" title="Home Page">Home</a></li>
@@ -17,8 +46,9 @@
         
         </ul>
       </nav>
-      <form id="salesForm">
+      <form id="salesForm" style="width: 70%;padding: 30px;">
         <fieldset>
+          <legend style="font-size: large;font-weight: bold;color: rgb(4, 80, 4);">  Adding Location Information Form</legend>
            
             <label for="locName"> Location Name</label>
             <input type="text" name="locName" id="locName" />
@@ -51,7 +81,7 @@
      
     </div>
   </main>
-  <footer>
+  <footer >
   </footer>
   <script src="js/app.js"></script>
 </body>
